@@ -2,7 +2,7 @@
 
 This is the official PyTorch implementation for the paper:
 
-> [Adapting Large Language Models by Integrating Collaborative Semantics for Recommendation](https://arxiv.org/abs/2311.09049)
+> [Adapting Large Language Models by Integrating Collaborative Semantics for Recommendation](https://ieeexplore.ieee.org/abstract/document/10597986/)
 
 ## Overview
 
@@ -122,3 +122,14 @@ torchrun --nproc_per_node=8 --master_port=23324 test_ddp.py \
 
 The implementation is based on [HuggingFace](https://github.com/huggingface/transformers).
 
+Please cite the following paper as the reference if you use our codes or the processed datasets.
+```bigquery
+@inproceedings{zheng2024adapting,
+  title={Adapting large language models by integrating collaborative semantics for recommendation},
+  author={Zheng, Bowen and Hou, Yupeng and Lu, Hongyu and Chen, Yu and Zhao, Wayne Xin and Chen, Ming and Wen, Ji-Rong},
+  booktitle={2024 IEEE 40th International Conference on Data Engineering (ICDE)},
+  pages={1435--1448},
+  year={2024},
+  organization={IEEE}
+}
+```

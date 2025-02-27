@@ -1,0 +1,114 @@
+PrgEnv-gnu/8.3.3(161):ERROR:150: Module 'PrgEnv-gnu/8.3.3' conflicts with the currently loaded module(s) 'PrgEnv-cray/8.3.3'
+PrgEnv-gnu/8.3.3(161):ERROR:102: Tcl command execution failed: conflict PrgEnv-cray
+
+/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama.LlamaTokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:13<00:13, 13.47s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:18<00:00,  8.31s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:18<00:00,  9.08s/it]
+Could not load bitsandbytes native library: /opt/cray/pe/gcc/11.2.0/snos/lib64/libstdc++.so.6: version `GLIBCXX_3.4.32' not found (required by /home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/bitsandbytes/libbitsandbytes_cpu.so)
+Traceback (most recent call last):
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/bitsandbytes/cextension.py", line 85, in <module>
+    lib = get_native_library()
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/bitsandbytes/cextension.py", line 72, in get_native_library
+    dll = ct.cdll.LoadLibrary(str(binary_path))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/ctypes/__init__.py", line 454, in LoadLibrary
+    return self._dlltype(name)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/ctypes/__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: /opt/cray/pe/gcc/11.2.0/snos/lib64/libstdc++.so.6: version `GLIBCXX_3.4.32' not found (required by /home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/bitsandbytes/libbitsandbytes_cpu.so)
+Using /home/users/ntu/chen035/.cache/torch_extensions/py311_cu124 as PyTorch extensions root...
+Emitting ninja build file /home/users/ntu/chen035/.cache/torch_extensions/py311_cu124/deepspeed_shm_comm/build.ninja...
+Building extension module deepspeed_shm_comm...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+Traceback (most recent call last):
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/torch/utils/cpp_extension.py", line 2209, in _run_ninja_build
+    subprocess.run(
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['ninja', '-v']' returned non-zero exit status 1.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/scratch/users/ntu/chen035/LC-Rec/finetune.py", line 122, in <module>
+    train(args)
+  File "/scratch/users/ntu/chen035/LC-Rec/finetune.py", line 71, in train
+    args=transformers.TrainingArguments(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 121, in __init__
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/transformers/training_args.py", line 1483, in __post_init__
+    and (self.device.type != "cuda")
+         ^^^^^^^^^^^
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/transformers/training_args.py", line 1921, in device
+    return self._setup_devices
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/transformers/utils/generic.py", line 54, in __get__
+    cached = self.fget(obj)
+             ^^^^^^^^^^^^^^
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/transformers/training_args.py", line 1853, in _setup_devices
+    self.distributed_state = PartialState(timeout=timedelta(seconds=self.ddp_timeout))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/accelerate/state.py", line 205, in __init__
+    dist.init_distributed(dist_backend=self.backend, auto_mpi_discovery=False, **kwargs)
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/deepspeed/comm/comm.py", line 691, in init_distributed
+    cdb = TorchBackend(dist_backend, timeout, init_method, rank, world_size)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/deepspeed/comm/torch.py", line 107, in __init__
+    self.shm_comm_op = build_shm_op()
+                       ^^^^^^^^^^^^^^
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/deepspeed/comm/torch.py", line 33, in build_shm_op
+    shm_cpp_module = builder.load()
+                     ^^^^^^^^^^^^^^
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/deepspeed/ops/op_builder/builder.py", line 540, in load
+    return self.jit_load(verbose)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/deepspeed/ops/op_builder/builder.py", line 587, in jit_load
+    op_module = load(name=self.name,
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/torch/utils/cpp_extension.py", line 1380, in load
+    return _jit_compile(
+           ^^^^^^^^^^^^^
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/torch/utils/cpp_extension.py", line 1798, in _jit_compile
+    _write_ninja_file_and_build_library(
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/torch/utils/cpp_extension.py", line 1926, in _write_ninja_file_and_build_library
+    _run_ninja_build(
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/torch/utils/cpp_extension.py", line 2225, in _run_ninja_build
+    raise RuntimeError(message) from e
+RuntimeError: Error building extension 'deepspeed_shm_comm'
+E0227 20:45:24.265000 1758802 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 1761204) of binary: /home/users/ntu/chen035/.conda/envs/LC-Rec/bin/python3.11
+Traceback (most recent call last):
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/users/ntu/chen035/.conda/envs/LC-Rec/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+finetune.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-02-27_20:45:24
+  host      : x1001c0s0b1n1.hostmgmt2001.cm.asp2a.nscc.sg
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 1761204)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

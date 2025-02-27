@@ -1,16 +1,16 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-			Resource Usage on 2025-02-27 12:47:55.094082:
+			Resource Usage on 2025-02-27 20:53:13.231175:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	JobId: 9556712.pbs101
+	JobId: 9560704.pbs101
 	Project: personal-chen035
 	Exit Status: 0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	NCPUs: Requested(16), Used(16)
-	CPU Time Used: 00:00:05
-	Memory: Requested(55gb), Used(200160kb)
-	Vmem Used: 2509404kb
-	Walltime: Requested(01:00:00), Used(00:01:00)
+	CPU Time Used: 00:00:58
+	Memory: Requested(55gb), Used(42330028kb)
+	Vmem Used: 3449028kb
+	Walltime: Requested(01:00:00), Used(00:02:05)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	Execution Nodes Used: (x1001c0s1b0n0:ncpus=16:mem=57671680kb)
+	Execution Nodes Used: (x1001c0s0b1n1:ncpus=16:mem=57671680kb)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	No GPU-related information available for this job.

@@ -12,6 +12,8 @@ from transformers import LlamaForCausalLM, LlamaTokenizer, LlamaConfig
 from utils import *
 from collator import Collator
 
+os.environ["HF_ENDPOINT"] = "https://hf-mirror.com/"
+
 def train(args):
 
     set_seed(args.seed)
@@ -19,12 +21,12 @@ def train(args):
 
     device_map = "auto"
     world_size = int(os.environ.get("WORLD_SIZE", 1))
-    ddp = world_size != 1
+    ddp = world_size != 1 #Distributed Data Parallel
     local_rank = int(os.environ.get("LOCAL_RANK") or 0)
     if local_rank == 0:
         print(vars(args))
 
-    if ddp:
+    if ddp: #If Distributed Data Parallel
         device_map = {"": local_rank}
 
     config = LlamaConfig.from_pretrained(args.base_model)
@@ -52,6 +54,7 @@ def train(args):
         args.base_model,
         # torch_dtype=torch.float16,
         device_map=device_map,
+        low_cpu_mem_usage=True
     )
     model.resize_token_embeddings(len(tokenizer))
 

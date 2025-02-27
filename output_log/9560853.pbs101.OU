@@ -1,0 +1,29 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Resource Usage on 2025-02-27 21:15:26.335854:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	JobId: 9560853.pbs101
+	Project: personal-chen035
+	Exit Status: 0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	NCPUs: Requested(16), Used(16)
+	CPU Time Used: 00:01:22
+	Memory: Requested(110gb), Used(15209248kb)
+	Vmem Used: 3999184kb
+	Walltime: Requested(01:00:00), Used(00:02:16)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	Execution Nodes Used: (x1000c0s0b0n1:ngpus=1:ncpus=16:mem=115343360kb)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	GPU Duration: 2.28mins
+	GPU Power Consumed: 50.81W
+	GPU Max GPU Memory Used: 26.58GB
+	Memory Throughput Rate (Average): x1000c0s0b0n1:(gpu1:0%)
+	Memory Throughput Rate (Max): x1000c0s0b0n1:(gpu1:0%)
+	Memory Throughput Rate (Min): x1000c0s0b0n1:(gpu1:0%)
+	GPU SM Utilization (Average): x1000c0s0b0n1:(gpu1:0%)
+	GPU SM Utilization (Max): x1000c0s0b0n1:(gpu1:6%)
+	GPU SM Utilization (Min): x1000c0s0b0n1:(gpu1:0%)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Warning: All GPUs have a percentage of 0 utilisation.
+GPU application profile: Idle
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+

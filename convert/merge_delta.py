@@ -7,7 +7,7 @@ import os
 import shutil
 import tempfile
 
-from huggingface_hub import snapshot_download
+from huggingface_hub import HfApi, snapshot_download
 import torch
 from torch import nn
 from tqdm import tqdm
@@ -16,6 +16,8 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, AutoConfig
 
 GB = 1 << 30
 
+os.environ["HF_ENDPOINT"] = "https://hf-mirror.com/"
+HfApi().endpoint = "https://hf-mirror.com/"
 
 def split_files(model_path, tmp_path, split_size):
     if not os.path.exists(model_path):

@@ -1,0 +1,70 @@
+/var/spool/pbs/mom_priv/jobs/9555477.pbs101.SC: line 18: ./output_log/out_9555477.pbs101_2025-02-27_10-53-20.out: No such file or directory
+# conda environments:
+#
+LC-Rec                   /home/users/ntu/chen035/.conda/envs/LC-Rec
+base                  *  /scratch/GPFS/app/apps/miniforge3/23.10
+
+# packages in environment at /home/users/ntu/chen035/.conda/envs/LC-Rec:
+#
+# Name                    Version                   Build  Channel
+_libgcc_mutex             0.1                 conda_forge    conda-forge
+_openmp_mutex             4.5                       2_gnu    conda-forge
+bzip2                     1.0.8                h4bc722e_7    conda-forge
+ca-certificates           2025.1.31            hbcca054_0    conda-forge
+certifi                   2022.12.7                pypi_0    pypi
+charset-normalizer        2.1.1                    pypi_0    pypi
+idna                      3.4                      pypi_0    pypi
+ld_impl_linux-64          2.43                 h712a8e2_4    conda-forge
+libffi                    3.4.6                h2dba641_0    conda-forge
+libgcc                    14.2.0               h767d61c_2    conda-forge
+libgcc-ng                 14.2.0               h69a702a_2    conda-forge
+libgomp                   14.2.0               h767d61c_2    conda-forge
+liblzma                   5.6.4                hb9d3cd8_0    conda-forge
+liblzma-devel             5.6.4                hb9d3cd8_0    conda-forge
+libnsl                    2.0.1                hd590300_0    conda-forge
+libsqlite                 3.49.1               hee588c1_1    conda-forge
+libuuid                   2.38.1               h0b41bf4_0    conda-forge
+libxcrypt                 4.4.36               hd590300_1    conda-forge
+libzlib                   1.3.1                hb9d3cd8_2    conda-forge
+ncurses                   6.5                  h2d0b736_3    conda-forge
+numpy                     1.24.1                   pypi_0    pypi
+openssl                   3.4.1                h7b32b05_0    conda-forge
+pillow                    10.2.0                   pypi_0    pypi
+pip                       24.3.1             pyh8b19718_0    conda-forge
+python                    3.8.20          h4a871b0_2_cpython    conda-forge
+readline                  8.2                  h8c095d6_2    conda-forge
+requests                  2.28.1                   pypi_0    pypi
+setuptools                75.3.0             pyhd8ed1ab_0    conda-forge
+tk                        8.6.13          noxft_h4845f30_101    conda-forge
+torch                     1.13.1+cu117             pypi_0    pypi
+torchaudio                0.13.1+cu117             pypi_0    pypi
+torchvision               0.14.1+cu117             pypi_0    pypi
+typing-extensions         4.12.2                   pypi_0    pypi
+urllib3                   1.26.13                  pypi_0    pypi
+wheel                     0.45.1             pyhd8ed1ab_0    conda-forge
+xz                        5.6.4                hbcc6ac9_0    conda-forge
+xz-gpl-tools              5.6.4                hbcc6ac9_0    conda-forge
+xz-tools                  5.6.4                hb9d3cd8_0    conda-forge
+Channels:
+ - conda-forge
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... environment: line 1: 578403 Killed                  ( "$CONDA_EXE" $_CE_M $_CE_CONDA "$@" )
+Cgroup mem limit exceeded: oom-kill:constraint=CONSTRAINT_MEMCG,nodemask=(null),cpuset=9555477.pbs101,mems_allowed=0-7,oom_memcg=/pbs_jobs.service/jobid/9555477.pbs101,task_memcg=/pbs_jobs.service/jobid/9555477.pbs101,task=conda,pid=578403,uid=33308
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Resource Usage on 2025-02-27 10:53:47.720627:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	JobId: 9555477.pbs101
+	Project: personal-chen035
+	Exit Status: 137
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	NCPUs: Requested(1), Used(1)
+	CPU Time Used: 00:00:15
+	Memory: Requested(1gb), Used(1048580kb)
+	Vmem Used: 795896kb
+	Walltime: Requested(01:00:00), Used(00:00:27)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	Execution Nodes Used: (x1001c0s0b0n0:ncpus=1:mem=1048576kb)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	No GPU-related information available for this job.
